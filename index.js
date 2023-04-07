@@ -6,7 +6,6 @@ const { womenRouter } = require("./routes/women.Route")
 const { cartRouter } = require("./routes/cart.Route")
 const { adminRouter } = require("./routes/admin.Route")
 const cors = require("cors");
-require("dotenv").config()
 const { authenticate } = require("./middlewares/authenticate.middleware");
 const app = express();
 app.use(cors());
@@ -24,12 +23,12 @@ app.use("/women", womenRouter)
 app.use("/cart", cartRouter)
 
 
-app.listen(process.env.port, async () => {
+app.listen(8800, async () => {
     try {
         await connection;
         console.log("Connected to DB");
     } catch (error) {
         console.log(error);
     }
-    console.log(`Server is running at ${process.env.port}`);
+    console.log(`Server is running at ${8800}`);
 })
