@@ -1,6 +1,6 @@
 const express = require("express");
 const { connection } = require("./configs/db")
-const { userRouter } = require("./routes/user.Route")
+const { userRouter } = require("./routes/user.route")
 const { menRouter } = require("./routes/men.Route")
 const { womenRouter } = require("./routes/women.Route")
 const { cartRouter } = require("./routes/cart.Route")
